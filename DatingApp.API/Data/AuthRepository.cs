@@ -58,6 +58,7 @@ namespace DatingApp.API.Data
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
             await _dataContext.Users.AddAsync(user);
+            await _dataContext.SaveChangesAsync();
             return user;
         }
 
@@ -65,7 +66,7 @@ namespace DatingApp.API.Data
         {
             if(await _dataContext.Users.AnyAsync(a=>a.Username == userName))
                 return true;
-                
+
             return false;
         }
     }
