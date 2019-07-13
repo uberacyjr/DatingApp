@@ -20,6 +20,7 @@ namespace DatingApp.API.Controllers
             this._dataContext = dataContext;
         }
         // GET api/values
+        [AllowAnonymous]
         [HttpGet]
         //IActionResult
         //Can return http responses like 404
