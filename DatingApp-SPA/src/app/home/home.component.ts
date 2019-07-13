@@ -8,22 +8,22 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
-  values: any;
+  // values: any;
   constructor(private http: HttpClient) { }
  // Happens after component intialization
   ngOnInit() {
-    this.getValues();
+    // this.getValues();
   }
   registerToggle() {
     this.registerMode = true;
   }
-  getValues() {
-    // (Observable) RxJS
-    this.http.get('http://localhost:5000/api/values').subscribe(response => { this.values = response;
-    }, error => {
-      console.log(error);
-    });
-  }
+  // getValues() {
+  //   // (Observable) RxJS
+  //   this.http.get('http://localhost:5000/api/values').subscribe(response => { this.values = response;
+  //   }, error => {
+  //     console.log(error);
+  //   });
+  // }
   cancelRegisterMode(registerMode: boolean) {
     this.registerMode = registerMode;
   }
