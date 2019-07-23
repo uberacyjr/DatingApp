@@ -1,0 +1,7 @@
+{
+    "appService.defaultWebAppToDeploy": "None",
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.showBuildDuringDeployPrompt": false
+}
