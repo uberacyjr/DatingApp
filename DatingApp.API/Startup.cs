@@ -78,7 +78,11 @@ namespace DatingApp.API
             // app.UseHttpsRedirection();
             //CORS POLICE
             //CROSS ORIGIN RESOURCE SHARING
-            app.UseCors(x=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+           app.UseCors(builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());  
             app.UseMvc();
         }
     }
